@@ -208,7 +208,7 @@ function App() {
                     className="btn btn-outline-primary m-1 tile-button"
                     onClick={() => handleTileClick(tile)}
                   >
-                    <img src={`/tiles/${tile}.png`} alt={tile} className="tile-image" />
+                    <img src={`${import.meta.env.BASE_URL}tiles/${tile}.png`} alt={tile} className="tile-image" />
                   </button>
                 ))}
               </div>
@@ -233,7 +233,7 @@ function App() {
                   className={`btn m-1 p-0 tile-button ${winningTile?.index === index ? 'winning-tile' : ''}`}
                   onClick={() => handleWinningTileClick(tile, index)}
                 >
-                  <img src={`/tiles/${tile}.png`} alt={tile} className="tile-image-display" />
+                  <img src={`${import.meta.env.BASE_URL}tiles/${tile}.png`} alt={tile} className="tile-image-display" />
                 </button>
               ))}
             </div>
@@ -251,7 +251,7 @@ function App() {
               選択中のドラ表示牌:
               {doraIndicators.map((indicator, index) => (
                 <span key={index} className="d-inline-block me-2">
-                  <img src={`/tiles/${indicator}.png`} alt={indicator} className="tile-image-display" />
+                  <img src={`${import.meta.env.BASE_URL}tiles/${indicator}.png`} alt={indicator} className="tile-image-display" />
                   <button className="btn btn-sm btn-outline-danger ms-1" onClick={() => removeDoraIndicator(index)}>x</button>
                 </span>
               ))}
@@ -268,7 +268,7 @@ function App() {
                     className="btn btn-outline-info btn-sm m-1 tile-button"
                     onClick={() => handleDoraIndicatorClick(tile)}
                   >
-                    <img src={`/tiles/${tile}.png`} alt={tile} className="tile-image-small" />
+                    <img src={`${import.meta.env.BASE_URL}tiles/${tile}.png`} alt={tile} className="tile-image-small" />
                   </button>
                 ))}
               </div>
@@ -287,7 +287,7 @@ function App() {
               選択中の裏ドラ表示牌:
               {uradoraIndicators.map((indicator, index) => (
                 <span key={index} className="d-inline-block me-2">
-                  <img src={`/tiles/${indicator}.png`} alt={indicator} className="tile-image-display" />
+                  <img src={`${import.meta.env.BASE_URL}tiles/${indicator}.png`} alt={indicator} className="tile-image-display" />
                   <button className="btn btn-sm btn-outline-danger ms-1" onClick={() => removeUradoraIndicator(index)}>x</button>
                 </span>
               ))}
@@ -305,7 +305,7 @@ function App() {
                     onClick={() => handleUradoraIndicatorClick(tile)}
                     disabled={!options.isRichi} // Uradora only enabled if Riichi is checked
                   >
-                    <img src={`/tiles/${tile}.png`} alt={tile} className="tile-image-small" />
+                    <img src={`${import.meta.env.BASE_URL}tiles/${tile}.png`} alt={tile} className="tile-image-small" />
                   </button>
                 ))}
               </div>
