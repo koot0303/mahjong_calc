@@ -1,42 +1,36 @@
+/* App.css */
+
 #root {
-  max-width: 1280px;
+  max-width: 960px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.tile-button {
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tile-image {
+  width: 40px; /* Adjust as needed */
+  height: auto;
+  vertical-align: middle;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.tile-image-display {
+  width: 30px; /* Adjust as needed for displayed hand */
+  height: auto;
+  vertical-align: middle;
 }
 
-.card {
-  padding: 2em;
+.tile-image-small {
+  width: 25px; /* Adjusted for smaller winning tile selection */
+  height: auto;
+  vertical-align: middle;
 }
 
-.read-the-docs {
-  color: #888;
+.winning-tile {
+  border: 2px solid red !important; /* Highlight for the winning tile */
+  border-radius: 5px;
 }
